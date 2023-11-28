@@ -33,7 +33,7 @@
             "ObjectType": "organization.Organization",
             "Moid": "{{ org_info.api_response.Moid }}"
         },
-        "Name": "pyreq_demo",
+        "Name": "ansible_demo",
         "Description": "Demo NTP Policy",
         "Enabled": True,
         "NtpServers": [
