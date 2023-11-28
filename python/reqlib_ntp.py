@@ -8,7 +8,6 @@ def get_org(AUTH):
     HEADERS = {"Content-Type": "application/json"}
     URL = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'"
     response = requests.get(url=URL, auth=AUTH, headers=HEADERS)
-    response.status_code
     return response.json()
 
 def create_ntp_policy(AUTH,orgMoid):
