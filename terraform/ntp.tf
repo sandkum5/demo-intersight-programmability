@@ -26,7 +26,6 @@ resource "intersight_ntp_policy" "ntp_policy" {
   timezone    = "America/Los_Angeles"
   organization {
     object_type = "organization.Organization"
-    # selector = "Name eq 'default'"
     moid = data.intersight_organization_organization.org_data.results[0].moid
   }
   tags {
