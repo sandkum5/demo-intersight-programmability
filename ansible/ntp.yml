@@ -24,7 +24,7 @@
     ansible.builtin.debug:
       var: org_info.api_response.Moid
 
-  - name: Create Multicast Policy
+  - name: Create NTP Policy
     cisco.intersight.intersight_rest_api:
       <<: *api_info
       resource_path: "/ntp/Policies"
