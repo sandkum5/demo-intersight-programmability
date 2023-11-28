@@ -18,7 +18,6 @@
       resource_path: /organization/Organizations
       query_params:
         $filter: "Name eq '{{ org_name }}'"
-      # return_list: true
     register: org_info
 
   - name: Print return information from the previous task
