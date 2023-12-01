@@ -9,7 +9,7 @@
 
 
 ## Python
-[Intersight SDK](https://github.com/CiscoDevNet/intersight-python/issues)
+[Intersight SDK](https://github.com/CiscoDevNet/intersight-python)
 
 [Intersight Authentication helper for requests library](https://pypi.org/project/intersight-auth/)
 
