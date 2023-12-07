@@ -12,7 +12,7 @@
     org_name: "default"
   tasks:
   # Get Org Info
-  - name: "Get Organization Info"
+  - name: Get Organization Info
     intersight_rest_api:
       <<: *api_info
       resource_path: /organization/Organizations
@@ -20,7 +20,7 @@
         $filter: "Name eq '{{ org_name }}'"
     register: org_info
 
-  - name: Print return information from the previous task
+  - name: Print Organization Moid from previous task
     ansible.builtin.debug:
       var: org_info.api_response.Moid
 
@@ -34,7 +34,7 @@
             "Moid": "{{ org_info.api_response.Moid }}"
         },
         "Name": "ansible_demo",
-        "Description": "Demo NTP Policy",
+        "Description": "Demo NTP Policy created using Ansible",
         "Enabled": True,
         "NtpServers": [
             "8.8.8.8",
@@ -43,3 +43,9 @@
         "Timezone": "America/Los_Angeles",
         "Tags": []
       }
+      state: present
+    register: ntp_policy
+
+  - name: Created NTP Policy Info
+    ansible.builtin.debug:
+      var: ntp_policy

@@ -8,7 +8,6 @@ from intersight.model.organization_organization_relationship import Organization
 from intersight.api import ntp_api
 from intersight.model.ntp_policy import NtpPolicy
 
-
 def get_api_client(api_key_id, api_secret_file, endpoint="https://intersight.com"):
     with open(api_secret_file, 'r') as f:
         api_key = f.read()
@@ -68,6 +67,7 @@ def get_organization_rel(moid):
 
 
 if __name__ == '__main__':
+    # Api Client
     with open('../ApiKey.txt', 'r') as f:
         ApiKey = f.read()
 
@@ -76,9 +76,11 @@ if __name__ == '__main__':
     # Create an api instance of the correct API type
     api_instance = ntp_api.NtpApi(api_client)
 
+    # Get Organization Info
     Orgs = get_orgs(api_client)
     OrgRel = get_organization_rel(Orgs.moid)
 
+    # NTP Policy Object with desired configuration
     ntp_policy = NtpPolicy(name="pysdk_demo",
                             description="Demo NTP Policy using Python SDK",
                             timezone="America/Los_Angeles",
@@ -88,6 +90,7 @@ if __name__ == '__main__':
                         )
 
     try:
+        # Create NTP Policy
         api_response = api_instance.create_ntp_policy(ntp_policy)
         pprint(api_response)
     except intersight.ApiException as e:
