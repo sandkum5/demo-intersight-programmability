@@ -106,7 +106,9 @@
 * Resource	    `resourcepool/Pools`
 * UUID	        `uuidpool/Pools`
 * WWNN	        `fcpool/Pools`
-* WWPN
+  	* Parameter: `PoolPurpose: "WWNN"`
+* WWPN		`fcpool/Pools`
+	* Parameter: `PoolPurpose: "WWPN"`
 
 ## ADDITIONAL APIS
 * Requests  	   `workflow/WorkflowInfos`
