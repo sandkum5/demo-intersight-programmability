@@ -1,11 +1,11 @@
 # Intersight API Paths
 
-**Format**  Object Name : `Intersight API Path`
-**Complete Path Creation**
-* `https://intersight.com/api/v1/<path>`
-* E.g. For UCS Server Profiles, the complete URL for SAAS would be:
-  * `https://intersight.com/api/v1/server/Profiles`
-  * For PVA/CVA, replace `intersight.com` with the `FQDN/IP` of the Intersight Private/Connected Virtual Appliance
+- **Format**  Object Name : `Intersight API Path`
+- **Complete Path Creation**
+  * `https://intersight.com/api/v1/<path>`
+  * E.g. For UCS Server Profiles, the complete URL for SAAS would be:
+    * `https://intersight.com/api/v1/server/Profiles`
+    * For PVA/CVA, replace `intersight.com` with the `FQDN/IP` of the Intersight Private/Connected Virtual Appliance
 
 ## Profiles
 * UCS Server Profiles       `server/Profiles`
