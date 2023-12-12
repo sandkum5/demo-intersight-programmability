@@ -10,6 +10,7 @@
 ## Profiles
 * UCS Server Profiles       `server/Profiles`
 * UCS Domain Profiles       `fabric/SwitchClusterProfiles`
+  * Individual FI Profile   `fabric/SwitchProfiles`
 * UCS Chassis Profiles      `chassis/Profiles`
 * HX Cluster Profiles       `hyperflex/ClusterProfiles`
 
