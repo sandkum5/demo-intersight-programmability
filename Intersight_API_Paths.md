@@ -42,7 +42,7 @@
 * iSCSI Boot	            `vnic/IscsiBootPolicies`
 * iSCSI Static Target	    `vnic/IscsiStaticTargetPolicies`
 * LAN Connectivity	        `vnic/LanConnectivityPolicies`
-  * VNICs	                `vnic/EthIfs`
+  * vNICs	                `vnic/EthIfs`
 * LDAP	                    `iam/LdapPolicies`
 * Local User	            `iam/EndPointUserPolicies`
 * Network Connectivity      `networkconfig/Policies`
@@ -50,7 +50,7 @@
 * Persistent Memory	        `memory/PersistentMemoryPolicies`
 * Power	                    `power/Policies`
 * SAN Connectivity	        `vnic/SanConnectivityPolicies`
-  * VHBAs	                `vnic/FcIfs`
+  * vHBAs	                `vnic/FcIfs`
 * SD Card	                `sdcard/Policies`
 * Serial Over LAN	        `sol/Policies`
 * SMTP	                    `smtp/Policies`
