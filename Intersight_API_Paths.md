@@ -1,7 +1,7 @@
 # Intersight API Paths
 
-- **Format**  Object Name : `Intersight API Path`
-- **Complete Path Creation**
+* **Format**  Object Name : `Intersight API Path`
+* **Complete Path Creation**
   * `https://intersight.com/api/v1/<path>`
   * E.g. For UCS Server Profiles, the complete URL for SAAS would be:
     * `https://intersight.com/api/v1/server/Profiles`
