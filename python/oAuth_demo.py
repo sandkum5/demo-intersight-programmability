@@ -17,13 +17,13 @@ def get_token(client_id, client_secret):
     token_json = response.json()
     return token_json["access_token"]
 
-def get_org(token):
+def get_org(token, client_id, client_secret):
     """ Get Organization Info """
     api_url = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'"
     headers = {'Authorization': 'Bearer ' + token}
     response = requests.get(url=api_url, headers=headers)
     if	response.status_code == 401:
-        token = get_token()
+        token = get_token(client_id, client_secret)
         get_org(token)
     else:
         pprint(response.json())
