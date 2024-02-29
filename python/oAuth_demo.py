@@ -37,7 +37,7 @@ def main():
     token = get_token(client_id, client_secret)
 
     # Get Organization Info
-    get_org(token)
+    get_org(token, client_id, client_secret)
 
 if __name__ == '__main__':
     main()
