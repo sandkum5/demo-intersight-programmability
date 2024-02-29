@@ -24,7 +24,7 @@ def get_org(token, client_id, client_secret):
     response = requests.get(url=api_url, headers=headers)
     if	response.status_code == 401:
         token = get_token(client_id, client_secret)
-        get_org(token)
+        get_org(token, client_id, client_secret)
     else:
         pprint(response.json())
 
