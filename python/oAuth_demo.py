@@ -22,12 +22,12 @@ def get_token(client_id, client_secret):
     token_json = response.json()
     return token_json["access_token"]
 
-def get_org(token, client_id, client_secret):
-    """ Get Organization Info """
-    api_url = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'"
+def get_api_data(token, client_id, client_secret, api_url):
+    """ Get API Endpoint Data """
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(url=api_url, headers=headers)
     if	response.status_code == 401:
+        print("Existing Token Expired. Generating a new one!")
         token = get_token(client_id, client_secret)
         get_org(token, client_id, client_secret)
     else:
@@ -37,9 +37,10 @@ if __name__ == '__main__':
     # Set variables
     client_id = "Add Client ID"    # Update
     client_secret = "Add Client Secret" # Update
-
+    api_url = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'&$Select=Name,Description" # Update
+    
     # Get oAuth Token
     token = get_token(client_id, client_secret)
 
-    # Get Organization Info
-    get_org(token, client_id, client_secret)
+    # Get API Endpoint Data
+    get_api_data(token, client_id, client_secret, api_url)
