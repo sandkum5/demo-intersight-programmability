@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # Set variables
     client_id = "Add Client ID"    # Update
     client_secret = "Add Client Secret" # Update
-    api_url = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'&$Select=Name,Description" # Update
+    api_url = "https://intersight.com/api/v1/organization/Organizations?$filter=Name eq 'default'&$select=Name,Description" # Update
     
     # Get oAuth Token
     token = get_token(client_id, client_secret)
