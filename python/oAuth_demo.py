@@ -29,7 +29,7 @@ def get_api_data(token, client_id, client_secret, api_url):
     if	response.status_code == 401:
         print("Existing Token Expired. Generating a new one!")
         token = get_token(client_id, client_secret)
-        get_org(token, client_id, client_secret)
+        get_api_data(token, client_id, client_secret, api_url)
     else:
         pprint(response.json())
 
