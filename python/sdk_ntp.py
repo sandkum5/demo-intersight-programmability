@@ -41,7 +41,7 @@ def get_api_client(api_key_id, api_secret_file, endpoint="https://intersight.com
         )
     )
     # if you want to turn off certificate verification
-    # configuration.verify_ssl = False
+    configuration.verify_ssl = False
 
     return intersight.ApiClient(configuration)
 
@@ -68,10 +68,10 @@ def get_organization_rel(moid):
 
 if __name__ == '__main__':
     # Api Client
-    with open('../ApiKey.txt', 'r') as f:
+    with open('./ApiKey.txt', 'r') as f:
         ApiKey = f.read()
 
-    api_client = get_api_client(ApiKey, "../SecretKey.txt")
+    api_client = get_api_client(ApiKey, "./SecretKey.txt")
 
     # Create an api instance of the correct API type
     api_instance = ntp_api.NtpApi(api_client)
